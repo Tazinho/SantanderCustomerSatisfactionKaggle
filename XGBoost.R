@@ -10,7 +10,7 @@ train_load <- train_load[sample(nrow(train_load)),]
 test_load <- fread(input = "test.csv", data.table = FALSE)
 train_raw <- train_load
 test_raw <- test_load
-### Preprocessing
+# Preprocessing ----------------------------------------------------------------
 n_train <- nrow(train_raw)
 n_test <- nrow(test_raw)
 #
@@ -18,3 +18,4 @@ dim(train_raw)
 dim(test_raw)
 all(names(train_raw)[-ncol(train_raw)] == names(test_raw))
 all(sapply(train_raw, function(x) is.numeric(x)))
+1+1
